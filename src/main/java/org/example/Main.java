@@ -1,13 +1,11 @@
 package org.example;
 
-
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-
         var monthUtils = new MonthUtils();
 
         Month[] concreteMonths = getConcreteMonths(monthUtils);
@@ -27,7 +25,6 @@ public class Main {
     }
 
     private static List<Employee> getEmployees() {
-
         final int MANAGER_PERCENT = 1;
         final int DIRECTOR_PERCENT = 3;
 
@@ -91,5 +88,4 @@ public class Main {
         var totalSalary = employee.getSalary(months);
         System.out.printf(OUTPUT_PATTERN, employee.getName(), totalSalary);
     }
-
 }

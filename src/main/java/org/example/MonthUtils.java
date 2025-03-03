@@ -5,7 +5,6 @@ import java.util.List;
 import java.util.Optional;
 
 public class MonthUtils {
-
     private final Month[] monthCollection = new Month[12];
     private final List<String> monthNames = Arrays.asList(
             "January", "February", "March", "April", "May", "June",
@@ -38,6 +37,5 @@ public class MonthUtils {
         return Arrays.stream(monthCollection)
                 .filter(m -> m.getName().equalsIgnoreCase(monthName))
                 .findFirst();
-
     }
 }

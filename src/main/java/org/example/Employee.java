@@ -15,7 +15,6 @@ public class Employee {
     public Employee(String name, int age, GenderEnum gender, BigDecimal salary) {
         // todo: check data values.
         this(name);
-
         this.age = age;
         this.sex = gender;
         this.wage = salary;

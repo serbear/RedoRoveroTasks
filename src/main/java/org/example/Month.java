@@ -1,7 +1,6 @@
 package org.example;
 
 public class Month {
-
     private final String name;
     private final int totalDays;
     private final Integer workDays;
