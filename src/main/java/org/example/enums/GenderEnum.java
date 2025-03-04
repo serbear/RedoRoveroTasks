@@ -1,5 +1,8 @@
-package org.example;
+package org.example.enums;
 
+/**
+ * Enum representing gender options.
+ */
 public enum GenderEnum {
     MALE("Male"),
     FEMALE("Female");
