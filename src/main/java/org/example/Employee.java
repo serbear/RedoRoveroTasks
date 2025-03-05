@@ -70,6 +70,21 @@ public class Employee {
     }
 
     /**
+     * Promotes the current employee to a Manager role with the specified number of subordinates.
+     *
+     * @param numberOfSubordinates The number of subordinates the new manager will oversee.
+     *                             Must be a positive integer.
+     * @return A new {@code Manager} instance representing the promoted employee.
+     * @throws IllegalArgumentException If the {@code numberOfSubordinates} is less than 0.
+     */
+    public Manager promoteToManager(int numberOfSubordinates) {
+        if (numberOfSubordinates < 0)
+            throw new IllegalArgumentException(
+                    ErrorMessagesEnum.INVALID_SUBORDINATES_NUMBER.getString());
+        return new Manager(this, numberOfSubordinates);
+    }
+
+    /**
      * Sets the gender of the employee.
      *
      * @param value the gender to set; must not be {@code null}.
@@ -110,6 +125,19 @@ public class Employee {
         this.age = value;
         return this;
     }
+
+    public int getAge() {
+        return age;
+    }
+
+    public GenderEnum getGender() {
+        return this.sex;
+    }
+
+    public BigDecimal getWage() {
+        return wage;
+    }
+
 
     public String getName() {
         return this.name;

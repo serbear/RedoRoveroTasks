@@ -34,6 +34,14 @@ public class Main {
                     concreteMonths);
             showTotalSalaryData(totalSalary);
 
+            // Promote Vasya.
+            var newVasya = employeesCollection[1].promoteToManager(1);
+            var msg = String.format(
+                    "%s if %s now! Be envious, mortals!",
+                    newVasya.getName(),
+                    newVasya.getClass().getSimpleName());
+            System.out.println(msg);
+
         } catch (IllegalArgumentException e) {
             System.out.printf(
                     OutputStringPatternEnum.ERROR.getString(),

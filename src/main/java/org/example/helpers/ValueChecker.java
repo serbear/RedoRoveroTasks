@@ -121,7 +121,7 @@ public class ValueChecker {
      * @throws IllegalArgumentException If the actual size does not match the expected size.
      */
     @SuppressWarnings("SameParameterValue")
-    private static void checkSize(
+    public static void checkSize(
             int actualSize,
             int expectedSize,
             ErrorMessagesEnum errorMessage) {

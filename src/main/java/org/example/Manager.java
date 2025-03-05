@@ -56,6 +56,24 @@ public class Manager extends Employee {
     }
 
     /**
+     * Constructs a new {@code Manager} object by promoting an existing {@code Employee}
+     * to a managerial position. This constructor initializes the {@code Manager} with the details
+     * of the {@code Employee} and sets the number of subordinates they will manage.
+     *
+     * @param employee             The {@code Employee} object being promoted to a {@code Manager}.
+     *                             This object provides the details which are inherited from
+     *                             the {@code Employee} class.
+     * @param numberOfSubordinates The number of subordinates the new {@code Manager} will oversee.
+     *                             This value is specific to the Manager role and is not applicable
+     *                             to a regular Employee.
+     * @see Employee
+     */
+    public Manager(Employee employee, int numberOfSubordinates) {
+        super(employee.getName(), employee.getAge(), employee.getGender(), employee.getWage());
+        this.subordinateNumber = numberOfSubordinates;
+    }
+
+    /**
      * Calculates the total salary for the current employee, considering the normal salary and
      * the supplementary salary based on the number of subordinates and the salary supplement
      * percentage.
